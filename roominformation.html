@@ -53,7 +53,7 @@ main {
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            text-align: center;
+            text-align: left;
             transition: transform 0.3s ease;
         }
 
@@ -63,7 +63,7 @@ main {
 
         .room-card h3 {
             font-size: 1.5em;
-            margin-bottom: 10px;
+        text-align: center;
         }
 
         .room-card p {
@@ -91,8 +91,10 @@ main {
         }
 
         .room-card .icon-container {
+            text-align: center;
             font-size: 1.5em;
             color: #333;
+
         }
 
         .add-room-container {
@@ -236,22 +238,10 @@ textarea {
     </header>
 
     <main class="main-content">
-        <h1 style="text-align: center; margin-bottom: 30px;  margin-top:30">Search My Room </h1>
+        <h1 style="text-align: center; margin-bottom: 30px;  margin-top:72px;">Search My Room </h1>
        
         <section class="room-container">
-            <!-- Room 1 -->
-            <div class="room-card">
-                <div class="icon-container">
-                    <i class="fas fa-bed"></i>
-                </div>
-                <h3>Single Bedroom</h3>
-                <p><strong>Rent:</strong> $500/month</p>
-                <p><strong>Electric Bill:</strong> $30/month</p>
-                <p><strong>Amenities:</strong> Water, Bed, Wi-Fi, Air Conditioning</p>
-                <button onclick="showContactForm()">Contact for More Info</button>
-            </div>
-
-            <!-- Room 2 -->
+          
             <div class="room-card">
                 <div class="icon-container">
                     <i class="fas fa-bed"></i>
@@ -263,7 +253,19 @@ textarea {
                 <button onclick="showContactForm()">Contact for More Info</button>
             </div>
 
-            <!-- Room 3 -->
+            <!-- Room 3 -->  
+            <div class="room-card">
+                <div class="icon-container">
+                    <i class="fas fa-bed"></i>
+                </div>
+                <h3>Single Bedroom</h3>
+                <p><strong>Rent:</strong> $500/month</p>
+                <p><strong>Electric Bill:</strong> $30/month</p>
+                <p><strong>Amenities:</strong> Water, Bed, Wi-Fi, Air Conditioning</p>
+                <button onclick="showContactForm()">Contact for More Info</button>
+            </div>
+
+            <!-- Room 2-->
             <div class="room-card">
                 <div class="icon-container">
                     <i class="fas fa-bed"></i>
@@ -326,50 +328,90 @@ textarea {
 
     <script>
         
-            // Show the contact form modal
-            function showContactForm() {
-                document.getElementById("contactModal").style.display = "block";
-            }
+            // // Show the contact form modal
+            // function showContactForm() {
+            //     document.getElementById("contactModal").style.display = "block";
+            // }
         
-            // Close the contact form modal
-            function closeContactForm() {
-                document.getElementById("contactModal").style.display = "none";
-            }
+            // // Close the contact form modal
+            // function closeContactForm() {
+            //     document.getElementById("contactModal").style.display = "none";
+            // }
         
-            // Form submission for adding a room
-            document.getElementById("roomForm").addEventListener("submit", function(event) {
-                event.preventDefault();
+            // // Form submission for adding a room
+            // document.getElementById("roomForm").addEventListener("submit", function(event) {
+            //     event.preventDefault();
         
-                // Get values from the form
-                const roomName = document.getElementById("roomName").value;
-                const rentPrice = document.getElementById("rentPrice").value;
-                const electricBill = document.getElementById("electricBill").value;
-                const amenities = document.getElementById("amenities").value.split(',');
+            //     // Get values from the form
+            //     const roomName = document.getElementById("roomName").value;
+            //     const rentPrice = document.getElementById("rentPrice").value;
+            //     const electricBill = document.getElementById("electricBill").value;
+            //     const amenities = document.getElementById("amenities").value.split(',');
         
-                // Create a new room card
-                const roomCard = document.createElement('div');
-                roomCard.classList.add('room-card');
+            //     // Create a new room card
+            //     const roomCard = document.createElement('div');
+            //     roomCard.classList.add('room-card');
                 
-                // Create the content for the new room card
-                roomCard.innerHTML = `
-                    <div class="icon-container">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <h3>${roomName}</h3>
-                    <p><strong>Rent:</strong> $${rentPrice}/month</p>
-                    <p><strong>Electric Bill:</strong> $${electricBill}/month</p>
-                    <p><strong>Amenities:</strong> ${amenities.join(', ')}</p>
-                    <button onclick="showContactForm()">Contact for More Info</button>
-                `;
+            //     // Create the content for the new room card
+            //     roomCard.innerHTML = `
+            //         <div class="icon-container">
+            //             <i class="fas fa-bed"></i>
+            //         </div>
+            //         <h3>${roomName}</h3>
+            //         <p><strong>Rent:</strong> $${rentPrice}/month</p>
+            //         <p><strong>Electric Bill:</strong> $${electricBill}/month</p>
+            //         <p><strong>Amenities:</strong> ${amenities.join(', ')}</p>
+            //         <button onclick="showContactForm()">Contact for More Info</button>
+            //     `;
         
-                // Append the new room card to the room container
-                document.querySelector('.room-container').appendChild(roomCard);
+            //     // Append the new room card to the room container
+            //     document.querySelector('.room-container').appendChild(roomCard);
         
-                // Clear the form after submission
-                document.getElementById("roomForm").reset();
-            });
+            //     // Clear the form after submission
+            //     document.getElementById("roomForm").reset();
+            // });
        
         
+  function showContactForm(imageUrl) {
+            const imageContainer = document.getElementById("imageContainer");
+            
+            // Show the image container and set the image
+            imageContainer.style.display = "block";
+            imageContainer.innerHTML = `<img src="${imageUrl}" alt="Room Image">`;
+        }
+        // Form submission for adding a room
+        document.getElementById("roomForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const roomName = document.getElementById("roomName").value;
+            const rentPrice = document.getElementById("rentPrice").value;
+            const electricBill = document.getElementById("electricBill").value;
+            const amenities = document.getElementById("amenities").value.split(',');
+
+      
+            const roomCard = document.createElement('div');
+            roomCard.classList.add('room-card');
+
+            roomCard.innerHTML = `
+                <div class="icon-container">
+                    <i class="fas fa-bed"></i>
+                </div>
+                <h3>${roomName}</h3>
+                <p><strong>Rent:</strong> $${rentPrice}/month</p>
+                <p><strong>Electric Bill:</strong> $${electricBill}/month</p>
+                <p><strong>Amenities:</strong> ${amenities.join(', ')}</p>
+                <button onclick="showContactForm('https://via.placeholder.com/800')">Contact for More Info</button>
+            `;
+
+            document.querySelector('.room-container').appendChild(roomCard);
+
+            document.getElementById("roomForm").reset();
+        });
     </script>
 </body>
-</html>
+</html> -->
+
+
+
+
+

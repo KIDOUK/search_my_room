@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -31,7 +32,7 @@
         
         body {
             font-family: Arial, sans-serif;
-            background-color: #243742;
+            background-color: #571414;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -40,7 +41,7 @@
         
         .container {
             text-align: center;
-            background-color:#243742;
+            background-color:#bacad4;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(14, 13, 13, 0.1);  animation: bounceIn 1s;
@@ -57,8 +58,9 @@
         
         h1 {
             margin-bottom: 20px;
-            font-size: 24px;
-            color: white;
+            font-size: large;
+            color:beige;
+            animation:forwards;
         }
         
         .role-container {
@@ -67,9 +69,9 @@
             gap: 40px;
         }
         p{
-            font-size: larger;
+            font-size: medium;
+            color: beige;
         }
-        
         .role-option {
             display: flex;
             justify-content: center;
@@ -80,7 +82,7 @@
         .circle {
             width: 100px;
             height: 100px;
-            background-color: #007BFF;
+            background-color: #aecff2;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -106,7 +108,7 @@
         
         
         .circle:hover {
-            background-color: #0056b3;
+            background-color: #21252d;
         }
         
         .message {
@@ -123,6 +125,8 @@
 </head>
 <body>
     <body>
+      <h1>Welcome to Student Stay
+</div>
         <div class="container">
             <h1>Select Your Role</h1>
             <div class="role-container">
@@ -155,13 +159,14 @@
                     messageElement.textContent = 'User login option selected. Redirecting to User page...';
                     // Redirect to the User page (index11.html)
                     setTimeout(function() {
-                        window.location.href = 'index11.html';  // Change the page to index11.html
+                        window.location.href = 'choseroomtype.html';  // Change the page to index11.html
                     }, 2000);  // Wait 2 seconds before redirecting
                 }
             
                 // Optional: You can hide the options after selection if needed
                 document.querySelector('.role-container').style.display = 'none';
             }
+            
         </script>
     </body>
     </html>

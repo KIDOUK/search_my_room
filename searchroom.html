@@ -18,15 +18,15 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
+    background-color: beige;
     color: #333;
     line-height: 1.6;
 }
 
 /* Header */
 .header {
-    background-color: #243742;
-    color: #fff;
+    background-color: rgb(112, 27, 27);
+    color:beige;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -35,7 +35,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(150, 41, 41, 0.1);
 }
 
 .header .logo {
@@ -45,7 +45,7 @@ body {
 
 .header .back-button {
     text-decoration: none;
-    background-color: #386786;
+    background-color: rgb(67, 21, 21);
     color: white;
     padding: 8px 16px;
     border-radius: 5px;
@@ -69,11 +69,9 @@ main {
 
 .title {
     font-size: 2rem;
-    
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
     margin-bottom: 20px;
     margin-top: 60px;
 }
@@ -117,7 +115,7 @@ main {
 }
 
 .room-info p {
-    font-size: 0.9rem;
+   
     margin: 5px 0;
 }
 
@@ -125,7 +123,7 @@ main {
     display: inline-block;
     margin: 10px 0;
     padding: 8px 12px;
-    background-color: #29495e;
+    background-color: #4CAF50;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -143,15 +141,15 @@ main {
 
 /* Footer */
 footer {
-    background-color: #0077b6;
-    color: white;
+    background-color: rgb(112, 27, 27);
+    color: rgb(194, 184, 184);
     text-align: center;
     padding: 15px 0;
     margin-top: 20px;
 }
 
 .footer-links a {
-    color: white;
+    color: rgb(179, 255, 0);
     margin: 0 10px;
     text-decoration: none;
     font-size: 0.9rem;
@@ -162,11 +160,11 @@ footer {
 }
 
 .deteals{
-   
+   font-size: 17px;
     display: inline-block;
     margin: 10px 0;
-    padding: 10px 12px;
-    background-color: #29495e;
+    padding: 10px 19px;
+    background-color: #4CAF50;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -184,7 +182,7 @@ footer {
     <header class="header">
       
             <div class="logo">StudentStay</div>
-            <a href="index11.html" class="back-button">Back</a>
+            <a href="choseroomtype.html" class="back-button">Back</a>
     
     </header>
 
@@ -193,15 +191,15 @@ footer {
         <div class="room-container">
             <!-- Room 1 -->
             <div class="room-card">
-                <img src="photo1.jpg" alt="Room 1" class="room-image">
+                <img src="image.png" alt="Room 1" class="room-image">
                 <div class="room-info">
-                    <h2 class="room-type">Room for Girls</h2>
+                    <h2 class="room-type">Room for Boys</h2>
                     <p><strong>Owner:</strong> Jane Doe</p>
                     <p><strong>Phone:</strong> (987) 654-3210</p>
                     <p><strong>Email:</strong> janedoe@example.com</p>
                     <p><strong>Address:</strong> 123 Main Street, Cityville</p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a> 
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -216,7 +214,7 @@ footer {
                     <p><strong>Email:</strong> johnsmith@example.com</p>
                     <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -225,12 +223,12 @@ footer {
                 <img src="photo1.jpg" alt="Room 2" class="room-image">
                 <div class="room-info">
                     <h2 class="room-type">Room for Boys</h2>
-                    <p><strong>Owner:</strong> John Smith</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> johnsmith@example.com</p>
-                    <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
+                    <p><strong>Owner:</strong> Bob Johnson</p>
+                    <p><strong>Phone:</strong> (555) 345-6789</p>
+                    <p><strong>Email:</strong> bobjohnson@example.com</p>
+                    <p><strong>Address:</strong>  6789 Oak Rd, Lakeside, CA, 92011</p>
                     <a href="https://maps.app.goo.gl/dRn65RfXEmzg7S2X6" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -240,12 +238,12 @@ footer {
                 <img src="photo1.jpg" alt="Room 2" class="room-image">
                 <div class="room-info">
                     <h2 class="room-type">Room for Boys</h2>
-                    <p><strong>Owner:</strong> John Smith</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> johnsmith@example.com</p>
-                    <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
+                    <p><strong>Owner:</strong> Michael Green</p>
+                    <p><strong>Phone:</strong> (555) 567-8901</p>
+                    <p><strong>Email:</strong> michaelgreen@example.com</p>
+                    <p><strong>Address:</strong> 1357 Cedar Ln, Greenfield, OH, 43123</p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -254,12 +252,12 @@ footer {
                 <img src="photo1.jpg" alt="Room 2" class="room-image">
                 <div class="room-info">
                     <h2 class="room-type">Room for Boys</h2>
-                    <p><strong>Owner:</strong> John Smith</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> johnsmith@example.com</p>
-                    <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
+                    <p><strong>Owner:</strong>  David Clark</p>
+                    <p><strong>Phone:</strong> (555) 789-0123</p>
+                    <p><strong>Email:</strong>davidclark@example.com</p>
+                    <p><strong>Address:</strong>3579 Willow St, Midtown, NY, 10001</p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -268,12 +266,12 @@ footer {
                 <img src="photo1.jpg" alt="Room 2" class="room-image">
                 <div class="room-info">
                     <h2 class="room-type">Room for Boys</h2>
-                    <p><strong>Owner:</strong> John Smith</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> johnsmith@example.com</p>
-                    <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
+                    <p><strong>Owner:</strong> Chris Miller</p>
+                    <p><strong>Phone:</strong> (555) 901-2345</p>
+                    <p><strong>Email:</strong>chrismiller@example.com</p>
+                    <p><strong>Address:</strong>  5791 Fir Ave, Sunnydale, AZ, 85001</p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -281,12 +279,12 @@ footer {
                 <img src="photo1.jpg" alt="Room 2" class="room-image">
                 <div class="room-info">
                     <h2 class="room-type">Room for Boys</h2>
-                    <p><strong>Owner:</strong> John Smith</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> johnsmith@example.com</p>
-                    <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
+                    <p><strong>Owner:</strong> James Wilson</p>
+                    <p><strong>Phone:</strong> (555) 123-4568</p>
+                    <p><strong>Email:</strong>  jameswilson@example.com</p>
+                    <p><strong>Address:</strong>  7913 Redwood Way, Brightfield, VA, 23456</p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -294,12 +292,14 @@ footer {
                 <img src="photo1.jpg" alt="Room 2" class="room-image">
                 <div class="room-info">
                     <h2 class="room-type">Room for Boys</h2>
-                    <p><strong>Owner:</strong> John Smith</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> johnsmith@example.com</p>
-                    <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
+                    <p><strong>Owner:</strong> Ethan Walker</p>
+                    <p><strong>Phone:</strong> (555) 345-6781</p>
+                    <p><strong>Email:</strong>  ethanwalker@example.com</p>
+                    <p><strong>Address:</strong>  9135 Oakwood Dr, Northlake, IL, 60062
+
+                    </p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -307,12 +307,14 @@ footer {
                 <img src="photo1.jpg" alt="Room 2" class="room-image">
                 <div class="room-info">
                     <h2 class="room-type">Room for Boys</h2>
-                    <p><strong>Owner:</strong> John Smith</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> johnsmith@example.com</p>
-                    <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
+                    <p><strong>Owner:</strong>  Daniel Carter</p>
+                    <p><strong>Phone:</strong>  (555) 567-8904</p>
+                    <p><strong>Email:</strong>  danielcarter@example.com</p>
+                    <p><strong>Address:</strong> 1350 Pine Ln, Larchmont, NY, 10538
+
+                    </p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -320,12 +322,13 @@ footer {
                 <img src="photo1.jpg" alt="Room 2" class="room-image">
                 <div class="room-info">
                     <h2 class="room-type">Room for Boys</h2>
-                    <p><strong>Owner:</strong> John Smith</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> johnsmith@example.com</p>
-                    <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
+                    <p><strong>Owner:</strong> Jack Davis</p>
+                    <p><strong>Phone:</strong> (555) 789-0126
+                    </p>
+                    <p><strong>Email:</strong>: jackdavis@example.com</p>
+                    <p><strong>Address:</strong> 3570 Elm Dr, Hillview, KY, 40201</p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -333,12 +336,15 @@ footer {
                 <img src="photo1.jpg" alt="Room 2" class="room-image">
                 <div class="room-info">
                     <h2 class="room-type">Room for Boys</h2>
-                    <p><strong>Owner:</strong> John Smith</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> johnsmith@example.com</p>
-                    <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
+                    <p><strong>Owner:</strong> William Scott</p>
+                    <p><strong>Phone:</strong> (555) 901-2347
+                    </p>
+                    <p><strong>Email:</strong> williamscott@example.com</p>
+                    <p><strong>Address:</strong> 5794 Sequoia Ave, Westbrook, OH, 43215
+
+                    </p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>
@@ -346,12 +352,12 @@ footer {
                 <img src="photo1.jpg" alt="Room 2" class="room-image">
                 <div class="room-info">
                     <h2 class="room-type">Room for Boys</h2>
-                    <p><strong>Owner:</strong> John Smith</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> johnsmith@example.com</p>
-                    <p><strong>Address:</strong> 456 Oak Avenue, Townsville</p>
+                    <p><strong>Owner:</strong> Mason Clark</p>
+                    <p><strong>Phone:</strong> (555) 345-6784</p>
+                    <p><strong>Email:</strong> masonclark@example.com</p>
+                    <p><strong>Address:</strong> 9235 Birch Blvd, Meadowbrook, CO, 80302</p>
                     <a href="https://www.google.com/maps" target="_blank" class="map-link">View on Map</a>
-                    <button onclick="window.location.href='roominformation.html'"class="deteals">deteals</button>
+                    <button onclick="window.location.href='roominformation.html'"class="deteals">Details</button>
                     <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
                 </div>
             </div>

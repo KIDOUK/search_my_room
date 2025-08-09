@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Room Type</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
@@ -17,14 +20,14 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f5f5f5;
+            background-color:#eee;
             color: #333;
             line-height: 1.6;
         }
 
         header {
-            background-color: #243742;
-            color: #fff;
+            background-color:  rgb(112, 27, 27);
+            color: beige;
             padding: 10px 20px;
             position: fixed;
             width: 100%;
@@ -44,7 +47,7 @@
         .back {
             text-decoration: none;
             color: #fff;
-            background-color: #386786;
+            background-color:#386786;
             padding: 8px 16px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
@@ -85,7 +88,7 @@
         }
 
         .room-card button {
-            background-color: #243742;
+            background-color: #101110;
             color: #fff;
             border-radius: 5px;
             padding: 10px 20px;
@@ -93,6 +96,8 @@
             cursor: pointer;
             margin-bottom: 10px;
             transition: background-color 0.3s ease;
+            font-family: Playfair Display, serif,
+            
         }
 
         .room-card button:hover {
@@ -106,7 +111,7 @@
         }
 
         footer {
-            background-color: #243742;
+            background-color: rgb(112, 27, 27);;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -139,31 +144,42 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+  .first{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">StudentStay</div>
-        <a href="index.html" class="back">Back</a>
+        <a href="loginpage.html" class="back">Back</a>
     </header>
 
     <main>
-        <h1 style="text-align: center; margin-bottom: 30px;">Choose Your Room Types</h1>
+        <h1 class="first" style="text-align: center; margin-bottom: 30px;   
+              font-family: Playfair Display, serif;
+              font-optical-sizing: auto;
+              font-weight: weight;
+              font-style: normal"
+            >Choose Your Room Types</h1>
         <div class="room-container">
             <!-- Room Card 1 -->
             <div class="room-card">
-                <img src="boys_photo.jpg" alt="Room for Boys">
+                <img src="boys.png" alt="Room for Boys">
                 <button onclick="window.location.href='searchroom.html'">Room for Boys</button>
             </div>
             <!-- Room Card 2 -->
             <div class="room-card">
-                <img src="girls_photo.jpg" alt="Room for Girls">
+                <img src="girls.png" alt="Room for Girls">
                 <button onclick="window.location.href='index4.html'">Room for Girls</button>
             </div>
             <!-- Room Card 3 -->
             <div class="room-card">
-                <img src="both.jpg" alt="Room for Both">
+                <img src="friends.png" alt="Room for Both">
                 <button onclick="window.location.href='index4.html'">Room for Both</button>
             </div>
             <!-- Room Card 4 -->
@@ -173,7 +189,7 @@
             </div>
             <!-- Room Card 5 -->
             <div class="room-card">
-                <img src="boys_hostal.jpg" alt="Boys Hostel">
+                <img src="hostel.png" alt="Boys Hostel">
                 <button onclick="window.location.href='index4.html'">Boys Hostel</button>
             </div>
             <!-- Room Card 6 -->
@@ -197,7 +213,7 @@
         <br>
         <h1>Get In Touch</h1>
         <br>
-        <button style="text-decoration: none;
+        <button  onclick ="window.location.href='contactus.html'" style ="text-decoration: none;
         font-size:20px;
     color: #fff;
     background-color: #386786;
