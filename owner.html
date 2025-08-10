@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Owner Login - StudentStay</title>
+  <style>
+    /* Base styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #faf6ef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Watermark background */
+    body::before {
+      content: "SS";
+      position: absolute;
+      font-size: 20rem;
+      font-weight: bold;
+      color: rgba(110, 59, 30, 0.05);
+      z-index: 0;
+      user-select: none;
+    }
+
+    /* Login card */
+    .login-card {
+      position: relative;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 320px;
+      z-index: 1;
+      text-align: center;
+    }
+
+    /* Logo circle */
+    .logo {
+      background-color: #6e3b1e;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto 15px auto;
+    }
+
+    h2 {
+      color: #6e3b1e;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #6e3b1e;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #a45c36;
+    }
+
+    /* Small links under login */
+    .forgot, .register-link {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      display: block;
+      color: #6e3b1e;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .forgot:hover, .register-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <div class="logo">SS</div>
+    <h2>Owner Login</h2>
+    <form onsubmit="return loginOwner()">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <a href="#" class="forgot">Forgot Password?</a>
+      <a href="#" class="register-link" onclick="goToRegister()">New Owner? Register here</a>
+    </form>
+  </div>
+
+  <script>
+    function loginOwner() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (email && password) {
+        window.location.href = 'ownerdashboard.html';
+      } else {
+        alert("Please enter valid credentials");
+      }
+      return false;
+    }
+
+    function goToRegister() {
+      window.location.href ='registration.html '; // Change to your registration page URL
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentStay</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fdfaf2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      background-color: #8c3f0e;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      animation: scaleIn 1.2s ease-in-out;
+    }
+
+    @keyframes scaleIn {
+      0% { transform: scale(0); }
+      100% { transform: scale(1); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-style: italic;
+      color: #000;
+      animation: slideDown 1s ease;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #a44b17;
+      font-style: italic;
+      margin-bottom: 20px;
+      animation: slideUp 1s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0 20px 0;
+      color: #000;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 30px;
+    }
+
+    button {
+      background: linear-gradient(145deg, #1a1a1a, #333);
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 40px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">SS</div>
+  <h1>Welcome to</h1>
+  <h2>StudentStay</h2>
+  <p>Select your role</p>
+  <div class="buttons">
+    <button onclick="selectRole('owner')">As Owner</button>
+    <button onclick="selectRole('user')">As User</button>
+  </div>
+
+  <script>
+    function selectRole(role) {
+      if (role === 'owner') {
+        window.location.href = 'owner.html'; // replace with actual link
+      } else if (role === 'user') {
+        window.location.href = 'userlogin.html'; // replace with actual link
+      }
+    }
+  </script>
+</body>
+</html>

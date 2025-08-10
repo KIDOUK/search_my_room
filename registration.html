@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Owner Registration - StudentStay</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #faf6ef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+    }
+    body::before {
+      content: "SS";
+      position: absolute;
+      font-size: 20rem;
+      font-weight: bold;
+      color: rgba(110, 59, 30, 0.05);
+      z-index: 0;
+      user-select: none;
+    }
+    .register-card {
+      position: relative;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 400px;
+      z-index: 1;
+      text-align: center;
+    }
+    .logo {
+      background-color: #6e3b1e;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto 15px auto;
+    }
+    h2 {
+      color: #6e3b1e;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #6e3b1e;
+      text-align: left;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    input[type="file"] {
+      margin-top: 5px;
+    }
+    .show-password {
+      margin-top: 8px;
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: #6e3b1e;
+      text-align: left;
+      user-select: none;
+    }
+    button {
+      background-color: #6e3b1e;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #a45c36;
+    }
+    .back-btn {
+      background-color: #a45c36;
+      margin-top: 10px;
+    }
+    .back-btn:hover {
+      background-color: #6e3b1e;
+    }
+    .terms {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    .terms input {
+      margin-right: 8px;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 5px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-card">
+    <div class="logo">SS</div>
+    <h2>Owner Registration</h2>
+    <form id="registerForm" enctype="multipart/form-data">
+      <label for="ownerName">Full Name</label>
+      <input type="text" id="ownerName" name="ownerName" required />
+
+      <label for="ownerEmail">Email</label>
+      <input type="email" id="ownerEmail" name="ownerEmail" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required />
+      <div id="passwordError" class="error" style="display:none;">Passwords do not match.</div>
+
+      <label class="show-password"><input type="checkbox" id="togglePassword" /> Show Password</label>
+
+      <label for="ownerPhone">Phone Number</label>
+      <input type="tel" id="ownerPhone" name="ownerPhone" pattern="[0-9]{10}" placeholder="10-digit phone number" required />
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="idProof">Identification Proof (Aadhaar, PAN, etc.)</label>
+      <input type="file" id="idProof" name="idProof" accept=".jpg,.jpeg,.png,.pdf" required />
+
+      <div class="terms">
+        <label><input type="checkbox" id="agreeTerms" required /> I agree to the <a href="#">terms and conditions</a>.</label>
+      </div>
+
+      <button type="submit">Register</button>
+      <button type="button" class="back-btn" onclick="goBack()">Back to Login</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('registerForm');
+    const passwordError = document.getElementById('passwordError');
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordField = document.getElementById('password');
+    const confirmPasswordField = document.getElementById('confirmPassword');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const password = passwordField.value;
+      const confirmPassword = confirmPasswordField.value;
+
+      if (password !== confirmPassword) {
+        passwordError.style.display = 'block';
+        return;
+      } else {
+        passwordError.style.display = 'none';
+      }
+
+      // Add your backend/Firebase save logic here
+
+      alert('Registration successful! Please login.');
+      window.location.href = 'owner.html';  // Redirect to login after registration
+    });
+
+    togglePassword.addEventListener('change', function() {
+      const type = this.checked ? 'text' : 'password';
+      passwordField.type = type;
+      confirmPasswordField.type = type;
+    });
+
+    function goBack() {
+      window.location.href = 'loginpage.html';  // Back to login page
+    }
+  </script>
+
+</body>
+</html>

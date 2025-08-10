@@ -45,13 +45,18 @@
         }
 
         .back {
-            text-decoration: none;
-            color: #fff;
-            background-color:#386786;
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+  text-decoration: none;
+  color: #fff;
+  background-color: #386786;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back:hover {
+  background-color: #76aab8;
+}
+
 
         .back:hover {
             background-color: #76aab8;
@@ -154,10 +159,10 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">StudentStay</div>
-        <a href="loginpage.html" class="back">Back</a>
-    </header>
+   <header>
+  <div class="logo">StudentStay</div>
+  <a href='index.html' class="back">Back</a>
+</header>
 
     <main>
         <h1 class="first" style="text-align: center; margin-bottom: 30px;   
@@ -170,32 +175,32 @@
             <!-- Room Card 1 -->
             <div class="room-card">
                 <img src="boys.png" alt="Room for Boys">
-                <button onclick="window.location.href='searchroom.html'">Room for Boys</button>
+                <button onclick="window.location.href='boys.html'">Room for Boys</button>
             </div>
             <!-- Room Card 2 -->
             <div class="room-card">
                 <img src="girls.png" alt="Room for Girls">
-                <button onclick="window.location.href='index4.html'">Room for Girls</button>
+                <button onclick="window.location.href='searchroom_girls.html'">Room for Girls</button>
             </div>
             <!-- Room Card 3 -->
             <div class="room-card">
                 <img src="friends.png" alt="Room for Both">
-                <button onclick="window.location.href='index4.html'">Room for Both</button>
+                <button onclick="window.location.href='forboth.html'">Room for Both</button>
             </div>
             <!-- Room Card 4 -->
-            <div class="room-card">
+            <!-- <div class="room-card">
                 <img src="flatsin.jpg" alt="Flats">
                 <button onclick="window.location.href='index4.html'">Flats</button>
-            </div>
+            </div> -->
             <!-- Room Card 5 -->
             <div class="room-card">
                 <img src="hostel.png" alt="Boys Hostel">
-                <button onclick="window.location.href='index4.html'">Boys Hostel</button>
+                <button onclick="window.location.href='boys_pg.html'">Boys Hostel</button>
             </div>
             <!-- Room Card 6 -->
             <div class="room-card">
                 <img src="girls_hostal.jpg" alt="Girls Hostel">
-                <button onclick="window.location.href='index4.html'">Girls Hostel</button>
+                <button onclick="window.location.href='girls_pg.html'">Girls Hostel</button>
             </div>
         </div>
     </main>

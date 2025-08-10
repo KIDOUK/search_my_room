@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rooms for Girls</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* General Reset & base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #eee;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: rgb(112, 27, 27);
+      color: beige;
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .back {
+      text-decoration: none;
+      color: #fff;
+      background-color: #386786;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .back:hover {
+      background-color: #76aab8;
+    }
+    main {
+      padding: 100px 20px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    .room-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
+
+    /* Different style for Girls rooms card */
+    .room-card {
+      background: #fff;
+      border: 2px solid #d87f7f; /* soft pinkish border */
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(216, 127, 127, 0.25);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .room-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(216, 127, 127, 0.4);
+    }
+    .room-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 3px solid #d87f7f;
+    }
+
+    /* Info section below the image */
+    .room-info {
+      padding: 15px 20px;
+      background-color: #fff0f0; /* light pink background */
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .room-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #a63636;
+    }
+    .room-info p {
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #4b1b1b;
+    }
+    .room-info .rent {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #822222;
+    }
+    .room-info .contact {
+      font-style: italic;
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #5c2a2a;
+    }
+
+    .room-info button {
+      background-color: oklab(49.702% 0.13458 0.06052);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 16px;
+      font-family: 'Playfair Display', serif;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: center;
+      width: 100%;
+    }
+    .room-info button:hover {
+      background-color: #d87f7f;
+      color: #5c1b1b;
+    }
+
+    footer {
+      background-color: rgb(112, 27, 27);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    footer ul {
+      list-style: none;
+      margin: 10px 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer ul a {
+      text-decoration: none;
+      color: #fff;
+      padding: 5px;
+      transition: color 0.3s ease;
+    }
+    footer ul a:hover {
+      color: #4caf50;
+    }
+
+    @media (max-width: 768px) {
+      .room-card {
+        width: 100%;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">StudentStay</div>
+    <a href="choseroomtype.html" class="back">Back</a>
+  </header>
+
+ <main class="room-section">
+  <h1 class="title">Rooms for Girls</h1>
+  <div class="room-container">
+
+    <!-- Room 1 -->
+    <div class="room-card">
+      <img src="Screenshot 2025-08-10 005303.png" alt="Room for Girls 1" class="room-image" />
+      <div class="room-info">
+        <h2 class="room-type">Room for Girls</h2>
+        <p><strong>Owner:</strong> Jane Doe</p>
+        <p><strong>Phone:</strong> +1 555-1234</p>
+        <p><strong>Email:</strong> janedoe@example.com</p>
+        <p><strong>Address:</strong> 123 Rose St, Springfield</p>
+        <a href="https://maps.google.com/?q=123+Rose+St,+Springfield" target="_blank" class="map-link">View on Map</a>
+        <button onclick="window.location.href='roominformation.html'" class="details">Details</button>
+        <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
+      </div>
+    </div>
+
+    <!-- Room 2 -->
+    <div class="room-card">
+      <img src="Screenshot 2025-08-10 005303.png" alt="Room for Girls 2" class="room-image" />
+      <div class="room-info">
+        <h2 class="room-type">Room for Girls</h2>
+        <p><strong>Owner:</strong> Emily Smith</p>
+        <p><strong>Phone:</strong> +1 555-5678</p>
+        <p><strong>Email:</strong> emilysmith@example.com</p>
+        <p><strong>Address:</strong> 45 Lavender Lane, Springfield</p>
+        <a href="https://maps.google.com/?q=45+Lavender+Lane,+Springfield" target="_blank" class="map-link">View on Map</a>
+        <button onclick="window.location.href='roominformation.html'" class="details">Details</button>
+        <p class="rating"><strong>Rating:</strong> ★★★☆☆</p>
+      </div>
+    </div>
+
+    <!-- Room 3 -->
+    <div class="room-card">
+      <img src="Screenshot 2025-08-10 005303.png" alt="Room for Girls 3" class="room-image" />
+      <div class="room-info">
+        <h2 class="room-type">Room for Girls</h2>
+        <p><strong>Owner:</strong> Lisa Brown</p>
+        <p><strong>Phone:</strong> +1 555-9101</p>
+        <p><strong>Email:</strong> lisabrown@example.com</p>
+        <p><strong>Address:</strong> 78 Tulip Road, Springfield</p>
+        <a href="https://maps.google.com/?q=78+Tulip+Road,+Springfield" target="_blank" class="map-link">View on Map</a>
+        <button onclick="window.location.href='roominformation.html'" class="details">Details</button>
+        <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
+      </div>
+    </div>
+
+    <!-- Room 4 -->
+    <div class="room-card">
+      <img src="Screenshot 2025-08-10 005303.png" alt="Room for Girls 4" class="room-image" />
+      <div class="room-info">
+        <h2 class="room-type">Room for Girls</h2>
+        <p><strong>Owner:</strong> Sarah Johnson</p>
+        <p><strong>Phone:</strong> +1 555-2345</p>
+        <p><strong>Email:</strong> sarahjohnson@example.com</p>
+        <p><strong>Address:</strong> 102 Daisy Ave, Springfield</p>
+        <a href="https://maps.google.com/?q=102+Daisy+Ave,+Springfield" target="_blank" class="map-link">View on Map</a>
+        <button onclick="window.location.href='roominformation.html'" class="details">Details</button>
+        <p class="rating"><strong>Rating:</strong> ★★★☆☆</p>
+      </div>
+    </div>
+
+    <!-- Room 5 -->
+    <div class="room-card">
+      <img src="Screenshot 2025-08-10 005303.png" alt="Room for Girls 5" class="room-image" />
+      <div class="room-info">
+        <h2 class="room-type">Room for Girls</h2>
+        <p><strong>Owner:</strong> Amanda Lee</p>
+        <p><strong>Phone:</strong> +1 555-6789</p>
+        <p><strong>Email:</strong> amandalee@example.com</p>
+        <p><strong>Address:</strong> 11 Orchid Street, Springfield</p>
+        <a href="https://maps.google.com/?q=11+Orchid+Street,+Springfield" target="_blank" class="map-link">View on Map</a>
+        <button onclick="window.location.href='roominformation.html'" class="details">Details</button>
+        <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
+      </div>
+    </div>
+
+    <!-- Room 6 -->
+    <div class="room-card">
+      <img src="Screenshot 2025-08-10 005303.png" alt="Room for Girls 6" class="room-image" />
+      <div class="room-info">
+        <h2 class="room-type">Room for Girls</h2>
+        <p><strong>Owner:</strong> Olivia Martin</p>
+        <p><strong>Phone:</strong> +1 555-4321</p>
+        <p><strong>Email:</strong> oliviamartin@example.com</p>
+        <p><strong>Address:</strong> 88 Willow St, Springfield</p>
+        <a href="https://maps.google.com/?q=88+Willow+St,+Springfield" target="_blank" class="map-link">View on Map</a>
+        <button onclick="window.location.href='roominformation.html'" class="details">Details</button>
+        <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
+      </div>
+    </div>
+
+    <!-- Room 7 -->
+    <div class="room-card">
+      <img src="Screenshot 2025-08-10 005303.png" alt="Room for Girls 7" class="room-image" />
+      <div class="room-info">
+        <h2 class="room-type">Room for Girls</h2>
+        <p><strong>Owner:</strong> Mia Clark</p>
+        <p><strong>Phone:</strong> +1 555-9876</p>
+        <p><strong>Email:</strong> miaclark@example.com</p>
+        <p><strong>Address:</strong> 250 Maple Rd, Springfield</p>
+        <a href="https://maps.google.com/?q=250+Maple+Rd,+Springfield" target="_blank" class="map-link">View on Map</a>
+        <button onclick="window.location.href='roominformation.html'" class="details">Details</button>
+        <p class="rating"><strong>Rating:</strong> ★★★☆☆</p>
+      </div>
+    </div>
+
+    <!-- Room 8 -->
+    <div class="room-card">
+      <img src="Screenshot 2025-08-10 005303.png" alt="Room for Girls 8" class="room-image" />
+      <div class="room-info">
+        <h2 class="room-type">Room for Girls</h2>
+        <p><strong>Owner:</strong> Sophia Lewis</p>
+        <p><strong>Phone:</strong> +1 555-2468</p>
+        <p><strong>Email:</strong> sophialewis@example.com</p>
+        <p><strong>Address:</strong> 130 Pine St, Springfield</p>
+        <a href="https://maps.google.com/?q=130+Pine+St,+Springfield" target="_blank" class="map-link">View on Map</a>
+        <button onclick="window.location.href='roominformation.html'" class="details">Details</button>
+        <p class="rating"><strong>Rating:</strong> ★★★★★</p>
+      </div>
+    </div>
+
+    <!-- Room 9 -->
+    <div class="room-card">
+      <img src="Screenshot 2025-08-10 005303.png" alt="Room for Girls 9" class="room-image" />
+      <div class="room-info">
+        <h2 class="room-type">Room for Girls</h2>
+        <p><strong>Owner:</strong> Chloe Walker</p>
+        <p><strong>Phone:</strong> +1 555-3698</p>
+        <p><strong>Email:</strong> chloewalker@example.com</p>
+        <p><strong>Address:</strong> 400 Cedar Ave, Springfield</p>
+        <a href="https://maps.google.com/?q=400+Cedar+Ave,+Springfield" target="_blank" class="map-link">View on Map</a>
+        <button onclick="window.location.href='roominformation.html'" class="details">Details</button>
+        <p class="rating"><strong>Rating:</strong> ★★★★☆</p>
+      </div>
+    </div>
+
+    <!-- Room 10 -->
+    <div class="room-card">
+      <img src="Screenshot 2025-
